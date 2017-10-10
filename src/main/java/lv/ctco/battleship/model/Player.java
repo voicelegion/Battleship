@@ -10,7 +10,15 @@ public class Player implements Serializable {
     private String userName;
     private Field myField = new Field();
 
-    public boolean areShipsPlaced = false;
+    public boolean areShipsPlaced() {
+        return areShipsPlaced;
+    }
+
+    public void setAreShipsPlaced(boolean areShipsPlaced) {
+        this.areShipsPlaced = areShipsPlaced;
+    }
+
+    private boolean areShipsPlaced = false;
 
     public Field getMyField() {
         return myField;

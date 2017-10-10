@@ -39,6 +39,6 @@ public class Game implements Serializable {
     }
 
     public boolean areShipsPlaced() {
-        return player1.areShipsPlaced && player2.areShipsPlaced;
+        return player1.areShipsPlaced() && player2.areShipsPlaced();
     }
 }

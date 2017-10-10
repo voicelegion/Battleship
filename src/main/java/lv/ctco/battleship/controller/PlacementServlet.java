@@ -48,7 +48,7 @@ public class PlacementServlet extends HttpServlet {
         if (error){
             request.getRequestDispatcher("/placement.jsp").include(request,response);
         }else{
-            player.areShipsPlaced = true;
+            player.setAreShipsPlaced(true);
             response.sendRedirect(request.getContextPath()+"/wait-opponents-ships");
         }
     }
