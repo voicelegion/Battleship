@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by roman.pipchenko on 10/2/2017.
  */
-public class Game  implements Serializable {
+public class Game implements Serializable {
     private static final long serialVersionUID = 1;
     private Player player1;
     private Player player2;
@@ -33,7 +33,12 @@ public class Game  implements Serializable {
     public void setPlayer2(Player player2) {
         this.player2 = player2;
     }
-    public boolean isComplete(){
-        return player1!= null && player2!= null;
+
+    public boolean isComplete() {
+        return player1 != null && player2 != null;
+    }
+
+    public boolean areShipsPlaced() {
+        return player1.areShipsPlaced && player2.areShipsPlaced;
     }
 }

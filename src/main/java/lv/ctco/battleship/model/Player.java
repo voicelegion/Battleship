@@ -10,6 +10,8 @@ public class Player implements Serializable {
     private String userName;
     private Field myField = new Field();
 
+    public boolean areShipsPlaced = false;
+
     public Field getMyField() {
         return myField;
     }
