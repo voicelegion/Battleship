@@ -3,8 +3,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: roman.pipchenko
-  Date: 10/2/2017
-  Time: 14:52
+  Date: 10/11/2017
+  Time: 16:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,11 +13,9 @@
     <title>BattleShip</title>
 </head>
 <body>
-    <h1>Welcome to battleship</h1>
-    <form method="post" action="<c:url value="/registration"/>">
-        <label>Enter your name: </label>
-        <input type="text" name="userName">
-        <button>Start</button>
-    </form>
+<h1>${playerManager.player.userName}, You lost the game.</h1>
+<form method="post" action="<c:url value="/index.jsp"/>">
+    <button type=submit value="Start again">Start a new game!</button>
+</form>
 </body>
 </html>

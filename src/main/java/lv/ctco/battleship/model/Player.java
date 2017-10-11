@@ -8,7 +8,13 @@ import java.io.Serializable;
 public class Player implements Serializable {
     private static final long serialVersionUID = 1;
     private String userName;
-    private Field myField = new Field();
+
+    public Field getOpponentField() {
+        return opponentField;
+    }
+
+    private final Field myField = new Field();
+    private final Field opponentField = new Field();
 
     public boolean areShipsPlaced() {
         return areShipsPlaced;
